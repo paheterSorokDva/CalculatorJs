@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=206797&c2=99c39d&gt=l&gd=dtl
+    */
+    background: #206797;
+    background: linear-gradient(100deg, #206797, #99C39D);
+}
+
+.calculator-grid{
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+
+    //background-color: rgba($color: #4285B4, $alpha: 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.spawn-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1/ -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    color: rgba(255,255,255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
